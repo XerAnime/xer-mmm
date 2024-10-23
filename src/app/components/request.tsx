@@ -9,7 +9,7 @@ import {
 } from "./types";
 
 const parent_url = (provider: string, title: string) => {
-	return `https://xer-mmm-api.vercel.app/${provider}/search/${title}`;
+	return `https://manga-scrapers.onrender.com/${provider}/search/${title}`;
 };
 
 export const fetchData = async (title: string, provider: string) => {
@@ -22,7 +22,7 @@ export const fetchData = async (title: string, provider: string) => {
 
 export const fetchFlameInfo = async (id: string) => {
 	const res = await fetch(
-		`https://xer-mmm-api.vercel.app/flamescans/info/${id}`,
+		`https://manga-scrapers.onrender.com/flamescans/info/${id}`,
 		{ next: { revalidate: 21600 } }
 	);
 	const data: FlamecomicsInfo = await res.json();
@@ -31,7 +31,7 @@ export const fetchFlameInfo = async (id: string) => {
 
 export const fetchMangareaderInfo = async (id: string) => {
 	const res = await fetch(
-		`https://xer-mmm-api.vercel.app/mangareader/info/${id}`,
+		`https://manga-scrapers.onrender.com/mangareader/info/${id}`,
 		{ next: { revalidate: 21600 } }
 	);
 	const data: MangareaderInfo = await res.json();
@@ -40,7 +40,7 @@ export const fetchMangareaderInfo = async (id: string) => {
 
 export const fetchMangapillInfo = async (id: string) => {
 	const res = await fetch(
-		`https://xer-mmm-api.vercel.app/mangapill/info/${id}`,
+		`https://manga-scrapers.onrender.com/mangapill/info/${id}`,
 		{ next: { revalidate: 21600 } }
 	);
 	const data: Mangapill = await res.json();
@@ -49,7 +49,7 @@ export const fetchMangapillInfo = async (id: string) => {
 
 export const fetchMangaWorldInfo = async (id: string) => {
 	const res = await fetch(
-		`https://xer-mmm-api.vercel.app/mangaworld/info/${id}`,
+		`https://manga-scrapers.onrender.com/mangaworld/info/${id}`,
 		{ next: { revalidate: 21600 } }
 	);
 	const data: Mangaworld = await res.json();
@@ -58,7 +58,7 @@ export const fetchMangaWorldInfo = async (id: string) => {
 
 export const imageFetcher = async (id: string, provider: string) => {
 	const res = await fetch(
-		`https://xer-mmm-api.vercel.app/${provider}/pages/${id}`,
+		`https://manga-scrapers.onrender.com/${provider}/pages/${id}`,
 		{ cache: "force-cache" }
 	);
 	const data = await res.json();
@@ -67,7 +67,7 @@ export const imageFetcher = async (id: string, provider: string) => {
 
 export const MangareaderLatest = async (type: string) => {
 	const res = await fetch(
-		`https://xer-mmm-api.vercel.app/flamescans/sort/${type}`,
+		`https://manga-scrapers.onrender.com/flamescans/sort/${type}`,
 		{ next: { revalidate: 21600 } }
 	);
 	const data = await res.json();
