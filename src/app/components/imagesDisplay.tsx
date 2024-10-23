@@ -19,7 +19,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 							key={index}
 							src={
 								mangapillCondition
-									? `https://xer-mmm-api.vercel.app/${provider}/images/${item}`
+									? `https://goodproxy.goodproxy.workers.dev/${provider}/images/${item}`
 									: item
 							}
 							alt="Manga Page"
