@@ -19,7 +19,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 							key={index}
 							src={
 								mangapillCondition
-									? `https://manga-scrapers.onrender.com/${provider}/images/${item}`
+									? `https://xer-mmm-api.vercel.app/${provider}/images/${item}`
 									: item
 							}
 							alt="Manga Page"
