@@ -19,7 +19,7 @@ const ImageDisplay = async (data: any, provider: string) => {
 							key={index}
 							src={
 								mangapillCondition
-									? `https://goodproxy.goodproxy.workers.dev/${provider}/images/${item}`
+									? `https://manga-scrapers.onrender.com/${provider}/images/${item}`
 									: item
 							}
 							alt="Manga Page"
