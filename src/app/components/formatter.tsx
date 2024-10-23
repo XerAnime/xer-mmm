@@ -21,7 +21,7 @@ const ResultsFormatter = async (data: Results, provider: string) => {
 							<Image
 								src={
 									mangapillCondition
-										? `https://xer-mmm-api.vercel.app/${provider}/images/${item.image}`
+										? `https://manga-scrapers.onrender.com/${provider}/images/${item.image}`
 										: item.image
 								}
 								alt="Manga Poster"
